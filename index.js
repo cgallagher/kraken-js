@@ -74,8 +74,7 @@ var kraken = {
 
             if (!that.port) {
                 // First app to declare `port` wins. `host` is gravy.
-                var port = (process.env.PORT || app.get('port'));
-                that.port = port;//app.get('port');
+                that.port = app.get('port');
                 that.host = app.get('host');
             }
 
